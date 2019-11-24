@@ -1,0 +1,18 @@
+<h3>Cadastro de Devedores</h3>
+
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Nome</label>
+        <input type="text" name="nome" [(ngModel)]="devedor.nome" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Item</label>
+        <input type="text" name="item" [(ngModel)]="devedor.item" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Data Empréstimo</label>
+        <input type="date" name="dataEmprestimo" [(ngModel)]="devedor.dataEmprestimo" class="form-control">
+    </div>
+
+    <button class="btn btn-primary"><fa-icon [icon]="faSave"></fa-icon> Salvar</button>
+</form>
