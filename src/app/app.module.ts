@@ -12,13 +12,18 @@ import { DevedorDataService } from './devedores/devedor-data.service';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DevedorHomeComponent } from './devedores/devedor-home/devedor-home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    EditComponent
+    EditComponent,
+    PageNotFoundComponent,
+    DevedorHomeComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    AppRoutingModule
     
   ],
   providers: [DevedorService, DevedorDataService],

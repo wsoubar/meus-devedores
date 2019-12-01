@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DevedorService } from '../devedor.service';
 import { DevedorDataService } from '../devedor-data.service';
 import { Devedor } from '../devedor';
-import { faSave } from '@fortawesome/free-solid-svg-icons';
+import { faSave, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'devedor-edit',
@@ -14,6 +14,7 @@ export class EditComponent implements OnInit {
   devedor: Devedor;
   key: string;
   faSave = faSave;
+  faCheck = faCheck;
 
   constructor(private _devedorService: DevedorService, 
               private _devedorDataService: DevedorDataService) { }

@@ -11,12 +11,22 @@
             <td>{{devedor.item}}</td>
             <td>{{devedor.dataEmprestimo}}</td>
             <td>
-                <button class="btn btn-info" title='Editar' (click)="edit(devedor, devedor.key)">
-                    <fa-icon [icon]="faPencilAlt"></fa-icon>
-                </button>
-                <button class="btn btn-danger ml-2" title='Excluir' (click)="delete(devedor.key)">
-                    <fa-icon [icon]="faTrash"></fa-icon>
-                </button>
+                
+                    <div class="col-sm">
+                        <div class="row">
+                            <button class="btn btn-info" title='Editar' (click)="edit(devedor, devedor.key)">
+                                <fa-icon [icon]="faPencilAlt"></fa-icon>
+                            </button>
+
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-danger mt-2" title='Excluir' (click)="delete(devedor.key)">
+                                <fa-icon [icon]="faTrash"></fa-icon>
+                            </button>
+
+                        </div>
+                    </div>
+                
             </td>
         </tr>
     </tbody>
